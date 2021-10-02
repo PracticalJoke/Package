@@ -546,7 +546,7 @@ function library:CreateWindow(name, size, hidebutton)
                 toggle.Main.Name = "toggle"
                 toggle.Main.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
                 toggle.Main.BorderColor3 = window.theme.outlinecolor
-                toggle.Main.BorderSizePixel = 0.5
+                toggle.Main.BorderSizePixel = 0
                 toggle.Main.Size = UDim2.fromOffset(10, 10)
                 toggle.Main.AutoButtonColor = false
                 toggle.Main.ZIndex = 4 
