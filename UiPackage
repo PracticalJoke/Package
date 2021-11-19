@@ -2567,8 +2567,8 @@ end
 
 ----[Main]--------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
-local MainTab = library:AddTab("Main");
-Local MainColumn = MainTab:AddColumn();
+
+
 -- [Library Settings UI] -----------------------------------------------------------------------------------------------------------------------------------------------------
 local SettingsTab = library:AddTab("Settings"); 
 local SettingsColumn = SettingsTab:AddColumn(); 
