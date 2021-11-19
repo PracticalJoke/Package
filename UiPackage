@@ -2667,32 +2667,6 @@ ConfigSection:AddButton({text = "Delete", callback = function()
     end
 end});
 
-local MiscTab = library:AddTab("Misc"); 
-local MiscColumn = MiscTab:AddColumn(); 
-local MiscSection = MiscColumn:AddSection("Main"); 
-local Warning = library:AddWarning({type = "confirm"});
-
-MiscSection:AddBind({text = "Keybind", flag = "UI Toggle", nomouse = true, key = "V", callback = function(val)
-    print(val)
-end});
-
-MiscSection:AddColor({flag = "Colorpicker", color = Color3.new(), callback = function(color)
-    print(color)
-end});
-
-MiscSection:AddSlider({text = "Slider", min = 50, max = 500, value = 50, callback = function(val)
-    print(val)
-end});
-
-MiscSection:AddBox({text = "Text Box", skipflag = true});
-
-MiscSection:AddList({text = "Dropdown", skipflag = true, value = "", flag = "Config List", values = {"hi", "hi 1", "hi 2"}});
-
-MiscSection:AddButton({text = "Button", callback = function()
-    print("pressed")
-end});
-
-
 -- [Init] --------------------------------------------------------------------------------------------------------------------------------------------------------------------
 library:Init();
 library:selectTab(library.tabs[1]);
