@@ -2565,6 +2565,10 @@ function library:Init()
 	end
 end
 
+----[Main]--------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+local MainTab = library:AddTab("Main");
+Local MainColumn = MainTab:AddColumn();
 -- [Library Settings UI] -----------------------------------------------------------------------------------------------------------------------------------------------------
 local SettingsTab = library:AddTab("Settings"); 
 local SettingsColumn = SettingsTab:AddColumn(); 
@@ -2666,17 +2670,6 @@ ConfigSection:AddButton({text = "Delete", callback = function()
         end
     end
 end});
-
-----[Main]--------------------------------------------------------------------------------------------------------------------------------------------------------------------
-
-local MainTab = library:AddTab("Main")
-local TestColumn = library:AddColumn("Test Column")
-local Test2Column = library:AddColumn("Test2 Column")
-local TestSector = library:AddSector("Test Sector")
-
-
-
-
 
 -- [Init] --------------------------------------------------------------------------------------------------------------------------------------------------------------------
 library:Init();
