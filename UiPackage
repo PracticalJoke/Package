@@ -17,7 +17,7 @@ local library = {
 	tabs = {},
 	draggable = true,
 	flags = {},
-	title = "Hook",
+	title = "Bars.Club",
 	open = false,
 	mousestate = inputService.MouseIconEnabled,
 	popup = nil,
@@ -27,7 +27,7 @@ local library = {
 	notifications = {},
 	tabSize = 0,
 	theme = {},
-	foldername = "HookConfig",
+	foldername = "",
 	fileext = ".cfg"
 }
 
@@ -2565,10 +2565,6 @@ function library:Init()
 	end
 end
 
-----[Main]--------------------------------------------------------------------------------------------------------------------------------------------------------------------
-
-
-
 -- [Library Settings UI] -----------------------------------------------------------------------------------------------------------------------------------------------------
 local SettingsTab = library:AddTab("Settings"); 
 local SettingsColumn = SettingsTab:AddColumn(); 
@@ -2670,6 +2666,32 @@ ConfigSection:AddButton({text = "Delete", callback = function()
         end
     end
 end});
+
+local MiscTab = library:AddTab("Misc"); 
+local MiscColumn = MiscTab:AddColumn(); 
+local MiscSection = MiscColumn:AddSection("Main"); 
+local Warning = library:AddWarning({type = "confirm"});
+
+MiscSection:AddBind({text = "Keybind", flag = "UI Toggle", nomouse = true, key = "V", callback = function(val)
+    print(val)
+end});
+
+MiscSection:AddColor({flag = "Colorpicker", color = Color3.new(), callback = function(color)
+    print(color)
+end});
+
+MiscSection:AddSlider({text = "Slider", min = 50, max = 500, value = 50, callback = function(val)
+    print(val)
+end});
+
+MiscSection:AddBox({text = "Text Box", skipflag = true});
+
+MiscSection:AddList({text = "Dropdown", skipflag = true, value = "", flag = "Config List", values = {"hi", "hi 1", "hi 2"}});
+
+MiscSection:AddButton({text = "Button", callback = function()
+    print("pressed")
+end});
+
 
 -- [Init] --------------------------------------------------------------------------------------------------------------------------------------------------------------------
 library:Init();
