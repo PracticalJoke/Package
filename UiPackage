@@ -2670,9 +2670,9 @@ end});
 ----[Main]--------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
 local MainTab = library:AddTab("Main")
-
-
-
+local TestColumn = library:AddColumn("Test Column")
+local Test2Column = library:AddColumn("Test2 Column")
+local TestSector = library:AddSector("Test Sector")
 
 
 
