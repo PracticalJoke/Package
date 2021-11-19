@@ -27,7 +27,7 @@ local library = {
 	notifications = {},
 	tabSize = 0,
 	theme = {},
-	foldername = "cuteware",
+	foldername = "HookConfig",
 	fileext = ".cfg"
 }
 
